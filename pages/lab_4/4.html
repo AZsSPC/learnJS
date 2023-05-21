@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Дужки</title>
+	<script src="/res/script/az.js"></script>
+	<script>__settings()</script>
+</head>
+
+<body>
+<header>
+	<script>__to_main()</script>
+	<h3>Дужки</h3>
+	<p>Дописати у вікні нижче функцію, яка перевіряє чи правильна послідовність дужок на вході.</p>
+	<p>Види дужок: () {} [] &lt;&gt;</p>
+	<p><strong>Результат роботи</strong>: true, якщо вхідний рядок містить правильну дужкову послідовність; або false,
+		якщо
+		послідовність є неправильною. Дужкова послідовність вважається правильною, якщо всі дужки можна розбити попарно
+		"відкриваюча"-"закриваюча",
+		при чому в кожній парі закриваюча дужка слідує після відкриваючої.</p>
+	<p></p>
+</header>
+<main>
+<pre id="editor">
+function validSequenceSimple(braces){  
+	// Write your code here 
+}
+</pre>
+</main>
+</body>
+
+<script>
+	__init(() => {
+			myEqual(f(''), true, 'empty string validates');
+            myEqual(f('[]'), true, 'valid case []');
+            myEqual(f('()'), true, 'valid case ()');
+            myEqual(f('{}'), true, 'valid case {}');
+            myEqual(f('<>'), true, 'valid case <>');
+            myEqual(f('}'), false, 'invalid case }');
+            myEqual(f('({'), false, 'invalid case ({');
+            myEqual(f(')('), false, 'invalid case )(');
+            myEqual(f('[<]'), false, 'invalid case [<]');
+            myEqual(f('({)}'), false, 'invalid case ({)}');
+            myEqual(f('([](<{}>))'), true, 'valid case ([](<{}>))');
+            myEqual(f('({[](<{}>}))'), false, 'invalid case ({[](<{}>}))');
+	})
+</script>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shopping Cart</title>
+	<script src="/res/script/az.js"></script>
+	<script>__settings()</script>
+</head>
+
+<body>
+<header>
+	<script>__to_main()</script>
+	<h3>Shopping Cart</h3>
+	<p>Напишіть функцію, яка обчислює загальну вартість товару в кошику для покупок, беручи до уваги знижки.</p>
+	<p>Товари зберігаються в масиві об'єктів, таких як { name: 'Milk', value: 10, amount: 2 }</p>
+	<p>Знижки - масив об'єктів, таких як { name: 'Milk', discount: '10%' }.</p>
+	<p><em><strong>Наприклад</strong></em></p>
+	<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: Consolas, 'Courier New', monospace; font-weight: normal; font-size: 14px; line-height: 19px; ">
+		<div><span style="color: #d4d4d4;">[</span></div>
+		<div><span style="color: #d4d4d4;"> { </span><span style="color: #9cdcfe;">name:</span><span style="color: #d4d4d4;"></span><span
+			 style="color: #ce9178;">'Milk'</span><span style="color: #d4d4d4;">, </span><span style="color: #9cdcfe;">value:</span><span
+			 style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">10</span><span style="color: #d4d4d4;">, </span><span
+			 style="color: #9cdcfe;">amount:</span><span style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">1</span><span
+			 style="color: #d4d4d4;"> },</span></div>
+		<div><span style="color: #d4d4d4;"> { </span><span style="color: #9cdcfe;">name:</span><span style="color: #d4d4d4;"></span><span
+			 style="color: #ce9178;">'Vegetables'</span><span style="color: #d4d4d4;">, </span><span style="color: #9cdcfe;">value:</span><span
+			 style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">20</span><span style="color: #d4d4d4;">, </span><span
+			 style="color: #9cdcfe;">amount:</span><span style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">1</span><span
+			 style="color: #d4d4d4;"> },</span></div>
+		<div><span style="color: #d4d4d4;"> { </span><span style="color: #9cdcfe;">name:</span><span style="color: #d4d4d4;"></span><span
+			 style="color: #ce9178;">'Meat'</span><span style="color: #d4d4d4;">, </span><span style="color: #9cdcfe;">value:</span><span
+			 style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">50</span><span style="color: #d4d4d4;">, </span><span
+			 style="color: #9cdcfe;">amount:</span><span style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">2</span><span
+			 style="color: #d4d4d4;"> }</span></div>
+		<div><span style="color: #d4d4d4;"> ], []</span></div><br />
+		<div><span style="color: #608b4e;">// 10 + 20 + 50 *
+				2 = 130</span></div>
+	</div>
+	<p></p>
+	<div style="color: #d4d4d4; background-color: #1e1e1e; font-family: Consolas, 'Courier New', monospace; font-weight: normal; font-size: 14px; line-height: 19px;">
+		<div><span style="color: #d4d4d4;">[</span></div>
+		<div><span style="color: #d4d4d4;"> { </span><span style="color: #9cdcfe;">name:</span><span style="color: #d4d4d4;">
+			</span><span style="color: #ce9178;">'Milk'</span><span style="color: #d4d4d4;">, </span><span style="color: #9cdcfe;">value:</span><span
+			 style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">10</span><span style="color: #d4d4d4;">, </span><span
+			 style="color: #9cdcfe;">amount:</span><span style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">1</span><span
+			 style="color: #d4d4d4;"> },</span></div>
+		<div><span style="color: #d4d4d4;"> { </span><span style="color: #9cdcfe;">name:</span><span style="color: #d4d4d4;">
+			</span><span style="color: #ce9178;">'Vegetables'</span><span style="color: #d4d4d4;">, </span><span style="color: #9cdcfe;">value:</span><span
+			 style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">20</span><span style="color: #d4d4d4;">, </span><span
+			 style="color: #9cdcfe;">amount:</span><span style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">1</span><span
+			 style="color: #d4d4d4;"> },</span></div>
+		<div><span style="color: #d4d4d4;"> { </span><span style="color: #9cdcfe;">name:</span><span style="color: #d4d4d4;">
+			</span><span style="color: #ce9178;">'Meat'</span><span style="color: #d4d4d4;">, </span><span style="color: #9cdcfe;">value:</span><span
+			 style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">50</span><span style="color: #d4d4d4;">, </span><span
+			 style="color: #9cdcfe;">amount:</span><span style="color: #d4d4d4;"> </span><span style="color: #b5cea8;">1</span><span
+			 style="color: #d4d4d4;"> }</span></div>
+		<div><span style="color: #d4d4d4;"> ], [</span></div>
+		<div><span style="color: #d4d4d4;"> { </span><span style="color: #9cdcfe;">name:</span><span style="color: #d4d4d4;">
+			</span><span style="color: #ce9178;">'Vegetables'</span><span style="color: #d4d4d4;">, </span><span style="color: #9cdcfe;">discount:</span><span
+			 style="color: #d4d4d4;"> </span><span style="color: #ce9178;">'50%'</span><span style="color: #d4d4d4;"> }</span></div>
+		<div><span style="color: #d4d4d4;"> ]</span></div>
+		<div><span style="color: #d4d4d4;"> </span><span style="color: #608b4e;">// 10 + 10 + 50 = 70</span></div>
+	</div>
+</header>
+<main>
+<pre id="editor">
+function totalCost(goods, discounts) { 
+	// Write your code here 
+}
+</pre>
+</main>
+</body>
+
+<script>
+	__init(() => {
+			myEqual(f([
+				{ name: 'Milk', value: 10, amount: 1 },
+				{ name: 'Vegetables', value: 20, amount: 1 },
+				{ name: 'Meat', value: 50, amount: 2 }
+			], []), 130, "Without discounts, simple case");
+			// 10 + 20 + 50 * 2 = 130
+
+			myEqual(f([
+				{ name: 'Milk', value: 10, amount: 1 },
+				{ name: 'Vegetables', value: 20, amount: 1 },
+				{ name: 'Meat', value: 50, amount: 2 },
+				{ name: 'Milk', value: 10, amount: 5 }
+			], []), 180, 'Without discounts, repeated names');
+			// 10 + 20 + 50 * 2 + 10 * 5 = 180
+
+			myEqual(f([
+				{ name: 'Milk', value: 10, amount: 1 },
+				{ name: 'Vegetables', value: 20, amount: 1 },
+				{ name: 'Meat', value: 50, amount: 1 }
+			], [
+					{ name: 'Vegetables', discount: '50%' }
+				]), 70, 'With discounts, simple case');
+			// 10 + 10 + 50 = 70
+
+			myEqual(f([
+				{ name: 'Milk', value: 10, amount: 1 },
+				{ name: 'Vegetables', value: 20, amount: 1 },
+				{ name: 'Meat', value: 50, amount: 1 },
+				{ name: 'Salt', value: 5, amount: 3 },
+				{ name: 'Milk', value: 10, amount: 5 }
+			], [
+					{ name: 'Vegetables', discount: '50%' },
+					{ name: 'Milk', discount: '10%' }
+				]), 129, 'With discounts, repeated names');
+			// 9 + 10 + 50 + 5 * 3 + 9 * 5 = 129
+	})
+</script>
+</html>

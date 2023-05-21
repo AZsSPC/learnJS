@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Послідовність Фібоначчі. Рекурсія</title>
+	<script src="/res/script/az.js"></script>
+	<script>__settings()</script>
+</head>
+
+<body>
+<header>
+	<script>__to_main()</script>
+	<h3>Послідовність Фібоначчі. Рекурсія</h3>
+	<p>Дописати у вікні нижче функцію, яка повертає <b><i>n</i></b>-е число Фібоначчі.</p>
+	<p>Послідовність чисел Фібоначчі обчислюється за формулою формулу <var>F(n) = F(n-1) + F(n-2)</var>. У ній
+		кожне наступне число обчислюється як сума двох попередніх. Перші два числа рівні 1 і 1.
+		Напишіть функцію <b><i>fib(n)</i></b>, яка повертає <b><i>n</i></b>-е число Фібоначчі. Використайте
+		рекурсію.
+	</p>
+	<ul>
+		<li>console.log(fib(3)); // 2</li>
+		<li>console.log(fib(7)); // 13</li>
+		<li>console.log(fib(77)); // 5527939700884757</li>
+	</ul>
+</header>
+<main>
+<pre id="editor">
+function fib(n){  
+	// Write your code here 
+}
+</pre>
+</main>
+</body>
+
+<script>
+	__init(() => {
+		function bigNumber(number) {
+			checkRecursion()
+			document.querySelector('.lds-dual-ring').remove()
+			try {myEqual(f(number), 5527939700884757, `fib(${number}) = 5527939700884757`)} catch {
+				alert('it is all')
+			}
+		}
+
+		checkRecursion()
+		myEqual(f(1), 1, 'fib(1) = 1')
+		myEqual(f(3), 2, 'fib(3) = 2')
+		myEqual(f(7), 13, 'fib(7) = 13')
+		myEqual(f(8), 21, 'fib(8) = 21')
+		myEqual(f(10), 55, 'fib(10) = 55')
+		//await myEqual(await f(77), 5527939700884757, 'fib(77) = 5527939700884757');
+
+		document.getElementById('outRes').innerHTML += `<p><b>Add test</b> fib(77) = 5527939700884757</p><div class="lds-dual-ring"></div>`
+		setTimeout(() => bigNumber(77), 500)
+
+	})
+</script>
+</html>
+
+
+<!-- function fib(n){  
+	// Write your code here 
+	if(n===1) return 1
+	if(n===2) return 1
+	return fib(n-1)+fib(n-2)
+}
+ -->

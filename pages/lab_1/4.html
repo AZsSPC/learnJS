@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Хід ферзя</title>
+	<script src="/res/script/az.js"></script>
+	<script>__settings()</script>
+</head>
+
+<body>
+<header>
+	<script>__to_main()</script>
+	<h3>Хід ферзя</h3>
+	<p>
+		Вася вирішив навчити свого молодшого брата грати в шахи.<br>
+		Але ось біда, брат ще занадто малий і ніяк не може запам'ятати
+		як ходить <a href="https://uk.wikipedia.org/wiki/%D0%A4%D0%B5%D1%80%D0%B7%D1%8C" target="_blank">ферзь</a>.<br>
+		Як справжній програміст, Вася вирішив автоматизувати ручну працю по навчанню початківців шахістів.<br>
+		Допоможіть йому написати програму, яка визначає чи є коректним хід ферзя.<br>
+		Координати вихідної та кінцевої позиції ходу передаються рядком у звичайній шаховій нотації, наприклад, "a1".
+	</p>
+	<p>Як завжди, постарайтеся вразити Васю красою і простотою отриманого коду!</p>
+</header>
+<main>
+<pre id="editor">
+function moveQueen(a, b){
+	//insert
+}
+</pre>
+</main>
+</body>
+
+<script>
+	__init(() => {
+		myEqual(f('a1', 'd4'), true, 'correct move(a1, d4)')
+		myEqual(f('f4', 'e7'), false, 'incorrect move(f4, e7)')
+		myEqual(f('a1', 'a4'), true, 'correct move(a1, a4)')
+		myEqual(f('c7', 'c2'), true, 'correct move(c7, c2)')
+		myEqual(f('g1', 'd4'), true, 'correct move(g1, d4)')
+		myEqual(f('a1', 'a1'), false, 'incorrect move(a1, a1)')
+	})
+</script>
+</html>

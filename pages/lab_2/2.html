@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Трикутник</title>
+	<script src="/res/script/az.js"></script>
+	<script>__settings()</script>
+</head>
+
+<body>
+<header>
+	<script>__to_main()</script>
+	<h3>Трикутник</h3>
+	<p>Програма має побудувати трикутник з елементів <accent>#</accent>. Кількість ліній задає користувач.</p>
+	<p><accent>Наприклад</accent></p>
+	<p>Вхідні дані: <accent>7</accent></p>
+	<p>Результат роботи:
+	<pre>
+#
+##
+###
+####
+#####
+######
+#######
+	</pre>
+
+</header>
+<main>
+	<pre id="editor">
+function draw(count){
+	//insert
+}
+</pre>
+</main>
+</body>
+
+<script>
+	__init(() => {
+		myEqual(f(5), '#\n##\n###\n####\n#####\n', '5 line')
+		myEqual(f(2), '#\n##\n', '2 line')
+		myEqual(f(8), '#\n##\n###\n####\n#####\n######\n#######\n########\n', '8 line')
+	})
+</script>
+</html>

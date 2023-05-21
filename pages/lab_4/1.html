@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Кількість об'єктів</title>
+	<script src="/res/script/az.js"></script>
+	<script>__settings()</script>
+</head>
+
+<body>
+<header>
+	<script>__to_main()</script>
+	<h3>Кількість об'єктів</h3>
+	<p>Дописати у вікні нижче функцію, яка приймає на вхід масив об'єктів. Кожен об'єкт має два поля: <var>x</var> та <var>y</var>.
+		Функція повинна повернути кількість всіх об'єктів у масиві, у яких
+		поле <var>x</var> дорівнює полю <var>y</var>.</p>
+	<p><b><i>Наприклад:</i></b><br>Вхідні дані: [{x: 1, y: 1}, {x: 2, y: 3}, {x: 3, y: 3}, {x: 3, y: 4}, {x: 4, y: 5}] <br>
+		Результат: 2
+	</p>
+</header>
+<main>
+<pre id="editor">
+function getCount(objects){  
+	// Write your code here 
+}
+</pre>
+</main>
+</body>
+
+<script>
+	__init(() => {
+		myEqual(f([{x: 1, y: 1}, {x: 2, y: 3}, {x: 3, y: 3}, {x: 3, y: 4}, {x: 4, y: 5}]), 2,
+				'[{x: 1, y: 1}, {x: 2, y: 3}, {x: 3, y: 3}, {x: 3, y: 4}, {x: 4, y: 5}]')
+		myEqual(f([{x: 1, y: 1}, {x: 2, y: 2}, {x: 3, y: 3}, {x: 4, y: 4}, {x: 4, y: 5}, {x: 6, y: 6}, {x: 7, y: 8}]), 5,
+				'[{x: 1, y: 1}, {x: 2, y: 2}, {x: 3, y: 3}, {x: 4, y: 4}, {x: 4, y: 5}, {x: 6, y: 6}, {x: 7, y: 8}]')
+		myEqual(f([{x: 1, y: 11}, {x: 2, y: 22}, {x: 3, y: 33}, {x: 4, y: 44}, {x: 5, y: 55}, {x: 6, y: 66}, {x: 7, y: 77}, {x: 8, y: 88}, {x: 9, y: 99}]), 0,
+				'[{x: 1, y: 11}, {x: 2, y: 22}, {x: 3, y: 33}, {x: 4, y: 44}, {x: 5, y: 55}, {x: 6, y: 66}, {x: 7, y: 77}, {x: 8, y: 88}, {x: 9, y: 99}]')
+
+	})
+</script>
+</html>

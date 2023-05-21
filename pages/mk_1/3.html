@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Модуль 1. Завдання 2</title>
+	<script src="/res/script/az.js"></script>
+	<script>__settings()</script>
+</head>
+
+<body>
+<header>
+	<script>__to_main()</script>
+	<h3>Матриця</h3>
+	<p>Дано ціле число <var>n</var>, необхідно вивести на екран матрицю чисел розміром <var>n</var> x
+		<var>n</var>. Матрицю заповнити
+		числами в діапазоні від 1 до n<sup>2</sup>. Числа, що розташовані на діагоналях матриці замінити на *
+	</p>
+	<pre>
+	Приклад 1:
+		Вхід: 5
+		Вихід: 
+		* 2 3 4 *
+		6 * 8 * 10
+		11 12 * 14 15
+		16 * 18 * 20
+		* 22 23 24 *</pre>
+
+</header>
+<main>
+<pre id="editor">
+function createMatrix (n) {  
+	// Write your code here
+}
+</pre>
+</main>
+</body>
+
+<script>
+	__init(() => {
+		myEqual(f(5), '* 2 3 4 * \n6 * 8 * 10 \n11 12 * 14 15 \n16 * 18 * 20 \n* 22 23 24 * \n', 'n = 5')
+		myEqual(f(4), '* 2 3 * \n5 * * 8 \n9 * * 12 \n* 14 15 * \n', 'n = 4')
+		myEqual(f(3), '* 2 * \n4 * 6 \n* 8 * \n', 'n = 3')
+		myEqual(f(2), '* * \n* * \n', 'n = 2')
+		myEqual(f(1), '* \n', 'n = 1')
+	})
+</script>
+</html>

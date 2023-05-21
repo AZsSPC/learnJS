@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Парність числа. Рекурсія</title>
+	<script src="/res/script/az.js"></script>
+	<script>__settings()</script>
+</head>
+
+<body>
+<header>
+	<script>__to_main()</script>
+	<h3>Парність числа. Рекурсія</h3>
+	<p>Дописати у вікні нижче функцію, яка перевіряє задане число на парність.</p>
+	<p>Оператор % (залишок від ділення) може використовуватися для визначення того, чи є число парним (% 2). А
+		ось ще один спосіб визначення:</p>
+	<ul>
+		<li>Нуль парний.</li>
+		<li>Одиниця непарна.</li>
+		<li>У будь-якого числа <var>N</var> парність така ж, як у <var>N</var> - 2.</li>
+	</ul>
+	<p>
+		Напишіть рекурсивну функцію <b><i>isEven</i></b> згідно з цими правилами. Вона повинна приймати число і
+		повертати булеве значення.
+	</p>
+	<p></p>
+</header>
+<main>
+<pre id="editor">
+function isEven(n){  
+	// Write your code here 
+}
+</pre>
+</main>
+</body>
+
+<script>
+	__init(() => {
+		checkRecursion()
+		myEqual(f(50), true, '50 - парне')
+		myEqual(f(75), false, '75 - непарне')
+		myEqual(f(-1), false, '-1 - непарне')
+		myEqual(f(-10), true, '-10 - парне')
+	})
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Модуль 1. Завдання 1</title>
+	<script src="/res/script/az.js"></script>
+	<script>__settings()</script>
+</head>
+
+<body>
+<header>
+	<script>__to_main()</script>
+	<h3>Калькулятор</h3>
+	<p>Реалізувати функцію калькулятор. Функція приймає 3 параметра: <br>
+		<code>
+			перший параметр типу Number,<br>
+			другий параметр типу Number,<br>
+			третій параметр типу String,<br>
+		</code>
+		в який передається значення операції. Значеннями операції можуть бути: «+», «-» , «*» і «/». Функція
+		повинна повернути результат виконаної операції
+	</p>
+	<p><b><i>Умова:</i></b> Необхідно розв'язати завдання без використання команд розгалуження (<code>if else, switch, тернарний оператор</code>)
+	</p>
+</header>
+<main>
+<pre id="editor">
+function count (num1, num2, mark) {  
+	// Write your code here
+}
+</pre>
+</main>
+</body>
+
+<script>
+	__init(() => {
+		myEqual(f(10, 20, '+'), 30, 'f(10, 20, "+") => 30')
+		myEqual(f(10, 20, '-'), -10, 'f(10, 20, "-") => -10')
+		myEqual(f(20, 10, '/'), 2, 'f(20, 10, "/") => 2')
+		myEqual(f(10, 20, '*'), 200, 'f(10, 20, "*") => 200')
+	})
+</script>
+</html>

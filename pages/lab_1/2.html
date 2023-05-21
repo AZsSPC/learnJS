@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Високосний рік</title>
+	<script src="/res/script/az.js"></script>
+	<script>__settings()</script>
+</head>
+
+<body>
+<header>
+	<script>__to_main()</script>
+	<h3>Високосний рік</h3>
+	<p>На вхід функції подається число, яким задається рік. Завдання визначити, чи є рік високосним.
+		Тобто повернути
+		<accent>true</accent>
+		, якщо рік високосний, та
+		<accent>false</accent>
+		в іншому випадку
+	</p>
+
+	<ul>
+		<li>рік, номер якого кратний 400 - високосний;</li>
+		<li>інші роки, номери яких кратні 100 - невисокосні;</li>
+		<li>інші роки, номери яких кратні 4 - високосні.</li>
+	</ul>
+	<p>
+		<accent>Примітка:</accent>
+		Потрібно задіяти логічні оператори, і не використовувати операції розгалуження!!!
+	</p>
+</header>
+<main>
+	<pre id="editor">
+function leapYear(year) {
+	//insert
+}
+</pre>
+</main>
+</body>
+
+<script>
+	__init(() => {
+		myEqual(f(2000), true, '2000 - Високосний рік')
+		myEqual(f(2020), true, '2020 - Високосний рік')
+		myEqual(f(2008), true, '2008 - Високосний рік')
+		myEqual(f(1904), true, '1904 - Високосний рік')
+		myEqual(f(1600), true, '1600 - Високосний рік')
+		myEqual(f(2023), false, '2023 - Невисокосний рік')
+		myEqual(f(2025), false, '2025 - Невисокосний рік')
+		myEqual(f(2100), false, '2100 - Невисокосний рік')
+		myEqual(f(1900), false, '1900 - Невисокосний рік')
+	})
+</script>
+</html>
