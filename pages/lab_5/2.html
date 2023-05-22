@@ -51,7 +51,7 @@ function fib(n){
 		myEqual(f(10), 55, 'fib(10) = 55')
 		//await myEqual(await f(77), 5527939700884757, 'fib(77) = 5527939700884757');
 
-		document.getElementById('outRes').innerHTML += `<p><b>Add test</b> fib(77) = 5527939700884757</p><div class="lds-dual-ring"></div>`
+		document.getElementById('test_result_output').innerHTML += __warning(`<p>Add test fib(77) = 5527939700884757</p><div class="lds-dual-ring"></div>`)
 		setTimeout(() => bigNumber(77), 500)
 
 	})

@@ -1,4 +1,4 @@
-let test_result_output, f, tests = {total: 0, passed: 0}
+let test_result_output, f, tests = {total: 0, passed: 0}, editor
 const __init = (test_fun) => {
 	__instruments()
 
@@ -31,7 +31,7 @@ const __init = (test_fun) => {
 		}
 	})
 
-	const editor = ace.edit('editor')
+	editor = ace.edit('editor')
 	let selectTheme = document.cookie ?? 'twilight'
 	editor.setTheme('ace/theme/' + selectTheme)
 	editor.session.setMode('ace/mode/javascript')
@@ -78,6 +78,5 @@ const isRecursion = () => {
 
 const checkRecursion = () => {
 	if (!isRecursion())
-		test_result_output.innerHTML += '<p><b style="color: orange;"><i class="fa fa-exclamation-triangle"></i> Warning:</b> ' +
-			'завдання зробленно без використання <a href="https://learn.javascript.ru/recursion">рекурсії</p>'
+		test_result_output.innerHTML += __warning('Завдання зробленно без використання <a href="https://learn.javascript.ru/recursion">рекурсії</a>, вирішіть цю проблему')
 }

@@ -56,7 +56,8 @@ function rotate(nums, k){
 		let time2 = Date.now()
 		console.log('time1: ', time2 - time1)
 		if (time2 - time1 > 100) {
-			document.getElementById('outRes').innerHTML += `<b style="color: orange;"><i class="fa fa-exclamation-triangle"></i> Warning:</b> Час роботи ${time2 - time1} мс. Це не оптимально, спробуйте змінити алгоритм роботи для зменшення часу.`
+			document.getElementById('test_result_output').innerHTML +=
+					__warning(`Час роботи ${time2 - time1} мс. Це не оптимально, спробуйте змінити алгоритм роботи для зменшення часу`)
 		}
 
 		arr = [...arrayInput]
@@ -66,7 +67,8 @@ function rotate(nums, k){
 		myEqual(arr, arrayRes, 'f([...100_000], 54944) => [...]')
 		console.log('time2: ', time2 - time1)
 		if (time2 - time1 > 100) {
-			document.getElementById('outRes').innerHTML += `<b style="color: orange;"><i class="fa fa-exclamation-triangle"></i> Warning:</b> Час роботи ${time2 - time1} мс. Це не оптимально, спробуйте змінити алгоритм роботи для зменшення часу.`
+			document.getElementById('test_result_output').innerHTML +=
+					__warning(`Час роботи ${time2 - time1} мс. Це не оптимально, спробуйте змінити алгоритм роботи для зменшення часу`)
 		}
 		window.scrollTo(0, 1500)
 	})

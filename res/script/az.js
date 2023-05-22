@@ -91,3 +91,5 @@ const __pages = () => {
 	document.write(str)
 }
 const __to_main = () => document.write('<a href="/index.html" id="to_main">На головну</a>')
+
+const __warning = (s) => `<li class="recursion_werning">${s}</li>`

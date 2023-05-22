@@ -10,7 +10,6 @@
     --c-back-2: #444;
     --c-accent: #ffc66d;
     --c-accent-light: #ffe5be;
-
     --c-test-ok: #5eacc4;
     --c-test-failed: #c05f5f;
 }
@@ -228,4 +227,8 @@ main {
 
 accent {
     color: var(--c-accent)
+}
+
+.recursion_werning {
+    background: var(--c-accent);
 }
